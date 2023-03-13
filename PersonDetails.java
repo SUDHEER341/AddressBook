@@ -1,7 +1,5 @@
-package com.addressbook;
+package com.addressbook;public class PersonDetails {
 
-
-public class PersonDetails {
     String firstName = new String();
     String lastName = new String();
     String address = new String();
@@ -23,7 +21,7 @@ public class PersonDetails {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(long phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -31,7 +29,7 @@ public class PersonDetails {
         return zip;
     }
 
-    public void setZip(int zip) {
+    public void setZip(String zip) {
         this.zip = zip;
     }
 
@@ -43,6 +41,13 @@ public class PersonDetails {
         this.state = state;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
     public String getCity() {
         return city;
     }
@@ -51,21 +56,7 @@ public class PersonDetails {
         this.city = city;
     }
 
-    public String getAddress() {
-        return address;
-    }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -74,7 +65,13 @@ public class PersonDetails {
     public String getFirstName() {
         return firstName;
     }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
+    public String getLastName() {
+        return lastName;
+    }
     public PersonDetails(String firstName, String lastName, String address, String city, String state, int zip, int phoneNumber ){
         this.firstName=firstName;
         this.lastName=lastName;
@@ -90,7 +87,8 @@ public class PersonDetails {
     }
     @Override
     public String toString() {
-        return "Employee [name=" + this.firstName +" "+ this.lastName + ", Address=" + this.address + ", City="
+        return "Employee [name=" + this.firstName +" "+ this.lastName + ", " +
+                "Address=" + this.address + ", City="
                 + this.city + ", state=" + this.state + ", zip=" + this.zip
                 + ", phone=" + this.phoneNumber + "]";
     }
